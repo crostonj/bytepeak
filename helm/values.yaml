@@ -8,7 +8,7 @@ image:
   repository: crostonj/bytepeak # Replace with your image name
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest" # Or use a specific tag like "1.0.0"
+  tag: "1.0.0-multiarch" # Or use a specific tag like "1.0.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -21,7 +21,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "bytespeak-service-account"
 
 podAnnotations: {}
 
@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP # Or LoadBalancer if you need external access
-  port: 80 # The port the service listens on
+  port: 8088 # The port the service listens on
   targetPort: 80 # The port your container listens on (from Dockerfile EXPOSE)
 
 ingress:
