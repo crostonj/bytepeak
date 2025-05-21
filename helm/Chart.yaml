@@ -1,5 +1,5 @@
 apiVersion: v2
-name: your-react-app
+name: bytepeak
 description: A Helm chart for deploying the React application
 
 # A chart can be either an application or a library chart.
@@ -17,3 +17,5 @@ version: 0.1.0
 # This is the version number of the application being deployed. This version number should be
 # incremented for application releases.
 appVersion: "1.0.0"
+
+icon: https://example.com/path/to/your/react-app-icon.png # Add your icon URL here
